@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary-color: #6a11cb; /* A vibrant purple */
+  --secondary-color: #2575fc; /* A bright blue */
+  --dark-color: #1a1a2e; /* Deep navy blue */
+  --light-color: #f0f2f5; /* Very light grey */
+  --text-color: #333;
+  --white-color: #ffffff;
+  --success-color: #28a745;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  margin: 0; /* Ensure no default body margin */
+  padding: 0; /* Ensure no default body padding */
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(26, 26, 46, 0.85); /* Semi-transparent dark */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  transition: background 0.3s ease;
+  margin-bottom: 0 !important; /* Ensure no margin below navbar */
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--white-color) !important;
+}
+
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--white-color) !important;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+/* Hero Section with Carousel */
+.hero-carousel {
+  position: relative;
+  min-height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  margin-top: 0 !important; /* Explicitly remove top margin */
+  padding-top: 0 !important; /* Explicitly remove top padding */
+}
+
+.hero-carousel .carousel-item {
+  height: 100vh;
+}
+
+.hero-carousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.hero-carousel .carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  color: var(--white-color);
+}
+
+.hero-carousel .carousel-caption h1 {
+  font-size: 4.5rem;
+  color: var(--white-color);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+
+.hero-carousel .carousel-caption p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Specific styling for the "Cara Mendaftar" button */
+.btn-hero {
+  padding: 0.8rem 2.5rem !important; /* Ensure desired padding */
+  font-size: 1.2rem !important; /* Ensure desired font size */
+}
+
+.btn-warning {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--white-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--white-color);
+}
+
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Cards - Neumorphism/Glassmorphism inspired */
+.card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+}
+
+.card-body {
+  padding: 2.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Timeline Section - Vertical Timeline */
+#timeline .row {
+  position: relative;
+  padding-top: 20px; /* Add some space at the top */
+  padding-bottom: 20px; /* Add some space at the bottom */
+}
+
+#timeline .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  border-radius: 3px;
+  z-index: 0; /* Ensure it's behind cards */
+}
+
+#timeline .col-md-4 {
+  z-index: 1; /* Ensure cards are above the line */
+  /* Adjust alignment for timeline cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#timeline .card {
+  margin-bottom: 2rem;
+  background: var(
+    --white-color
+  ); /* Ensure solid background for timeline cards */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Ensure card takes full width of its column */
+  max-width: 300px; /* Limit card width for better visual */
+}
+
+#timeline .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#timeline .card-title {
+  color: var(--dark-color);
+}
+
+#timeline .card-text.text-primary {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+}
+
+/* Divisi Section */
+#divisi .p-4 {
+  border-radius: 20px;
+  background: var(--white-color);
+  transition: all 0.3s ease;
+}
+
+#divisi .p-4:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact .card {
+  background: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 1rem; /* Reduce padding */
+}
+
+#contact .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+#contact .card-body {
+  padding: 1.5rem; /* Further reduce padding */
+}
+
+#contact .card-title {
+  font-size: 1.5rem; /* Adjust font size */
+  color: var(--dark-color);
+  margin-bottom: 1rem; /* Adjust margin */
+}
+
+#contact .btn-success {
+  background: linear-gradient(90deg, #28a745, #20c997);
+  border: none;
+  padding: 0.6rem 1.5rem; /* Adjust button padding */
+  font-size: 0.9rem; /* Adjust button font size */
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+#contact .btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-carousel .carousel-caption h1 {
+    font-size: 3.5rem;
+  }
+  .hero-carousel .carousel-caption p {
+    font-size: 1.1rem;
+    max-width: 90%; /* Allow paragraph to take more width */
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-carousel .carousel-caption h1 {
+    font-size: 2.8rem;
+  }
+  .hero-carousel .carousel-caption p {
+    font-size: 1rem;
+    max-width: 90%; /* Allow paragraph to take more width */
+  }
+  #timeline .row::before {
+    left: 20px;
+  }
+  #timeline .col-md-4 {
+    margin-left: 0; /* Reset margin for small screens */
+    padding-left: 40px; /* Add padding to align with line */
+    align-items: flex-start; /* Align content to the left for mobile */
+  }
+  #timeline .card {
+    max-width: none; /* Remove max-width on small screens */
+    text-align: left; /* Align text to left for mobile */
+  }
+  #contact .card-title {
+    font-size: 1.3rem;
+  }
+  #contact .btn-success {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+  section {
+    padding: 40px 0; /* Reduce section padding on mobile */
+  }
+  .card-body {
+    padding: 1.5rem; /* Reduce card body padding on mobile */
+  }
+  .alert {
+    padding: 1.5rem; /* Reduce alert padding on mobile */
+  }
+  .accordion-button {
+    padding: 1.2rem 1.5rem; /* Reduce accordion button padding on mobile */
+  }
+  .accordion-body {
+    padding: 1.2rem 1.5rem; /* Reduce accordion body padding on mobile */
+  }
+  .btn {
+    padding: 0.6rem 1.5rem; /* Further adjust button padding on mobile */
+    font-size: 1rem; /* Further adjust button font size on mobile */
+  }
+  .btn-hero {
+    padding: 0.7rem 2rem !important; /* Ensure desired padding */
+    font-size: 1.1rem !important; /* Ensure desired font size */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-carousel .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  .hero-carousel .carousel-caption p {
+    font-size: 0.9rem;
+    max-width: 95%; /* Allow paragraph to take more width */
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  /* --- PERUBAHAN DI SINI --- */
+  .btn:not(.btn-hero) {
+    /* Terapkan ke semua .btn KECUALI .btn-hero */
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Even smaller padding for very small screens */
+    font-size: 0.9rem; /* Even smaller font size for very small screens */
+  }
+
+  .btn-hero {
+    width: auto; /* Kembalikan ke lebar otomatis */
+    padding: 0.8rem 1.8rem !important; /* Sesuaikan padding untuk mobile */
+    font-size: 1rem !important; /* Sesuaikan ukuran font untuk mobile */
+  }
+}
+
+.navbar-scrolled {
+  background-color: var(--dark-color) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

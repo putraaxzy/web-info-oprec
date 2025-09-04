@@ -86,9 +86,10 @@
                   masa depan yang berkomitmen, kreatif, dan inspiratif!
                 </p>
                 <a
-                  href="#pendaftaran"
+                  href="https://oprec.ptraazxtt.my.id/register"
                   class="btn btn-warning btn-hero fw-bold mt-3"
-                  >Cara Mendaftar</a
+                  target="_blank"
+                  >Daftar Online Sekarang!</a
                 >
               </div>
             </div>
@@ -112,9 +113,10 @@
                   masa depan yang berkomitmen, kreatif, dan inspiratif!
                 </p>
                 <a
-                  href="#pendaftaran"
+                  href="https://oprec.ptraazxtt.my.id/register"
                   class="btn btn-warning btn-hero fw-bold mt-3"
-                  >Cara Mendaftar</a
+                  target="_blank"
+                  >Daftar Online Sekarang!</a
                 >
               </div>
             </div>
@@ -138,9 +140,10 @@
                   masa depan yang berkomitmen, kreatif, dan inspiratif!
                 </p>
                 <a
-                  href="#pendaftaran"
+                  href="https://oprec.ptraazxtt.my.id/register"
                   class="btn btn-warning btn-hero fw-bold mt-3"
-                  >Cara Mendaftar</a
+                  target="_blank"
+                  >Daftar Online Sekarang!</a
                 >
               </div>
             </div>
@@ -167,6 +170,40 @@
       </div>
     </section>
 
+    <!-- Form Availability Notification -->
+    <section id="form-status" class="py-3 bg-light">
+      <div class="container text-center">
+        <div id="countdown-timer" class="mb-3">
+          <h3 class="fw-bold" id="timer-message"></h3>
+          <div id="timer-display" class="d-flex justify-content-center gap-3">
+            <div class="p-2 border rounded bg-white">
+              <span id="days" class="display-5 fw-bold">00</span>
+              <div class="text-muted">Hari</div>
+            </div>
+            <div class="p-2 border rounded bg-white">
+              <span id="hours" class="display-5 fw-bold">00</span>
+              <div class="text-muted">Jam</div>
+            </div>
+            <div class="p-2 border rounded bg-white">
+              <span id="minutes" class="display-5 fw-bold">00</span>
+              <div class="text-muted">Menit</div>
+            </div>
+            <div class="p-2 border rounded bg-white">
+              <span id="seconds" class="display-5 fw-bold">00</span>
+              <div class="text-muted">Detik</div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="form-notification"
+          class="alert alert-info d-none"
+          role="alert"
+        >
+          <p class="mb-0" id="notification-message"></p>
+        </div>
+      </div>
+    </section>
+
     <!-- Timeline Section -->
     <section id="timeline" class="py-5">
       <div class="container">
@@ -181,8 +218,18 @@
             <div class="card h-100 shadow-sm text-center">
               <div class="card-body">
                 <h5 class="card-title fw-bold">Pendaftaran</h5>
-                <p class="card-text fs-4 text-primary">1 - 6 September 2025</p>
-                <p>Pengambilan dan pengumpulan formulir fisik di ruang OSIS.</p>
+                <p class="card-text fs-4 text-primary">1 - 8 September 2025</p>
+                <p>
+                  Pendaftaran dilakukan secara online melalui tautan berikut:
+                </p>
+                <p>
+                  <a
+                    href="https://oprec.ptraazxtt.my.id/register"
+                    class="btn btn-primary btn-sm"
+                    target="_blank"
+                    >Daftar Online</a
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -327,15 +374,16 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
               >
-                1. Tahap Pendaftaran (1 - 6 September)
+                1. Tahap Pendaftaran (1 - 8 September)
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show">
               <div class="accordion-body">
-                <strong>Cara Mendaftar:</strong> Pendaftaran hanya dilakukan
-                dengan mengisi <strong>formulir fisik</strong>. Formulir bisa
-                didapatkan di Ruang OSIS dan dikumpulkan di kotak pos yang
-                tersedia di perpustakaan. <br /><br />
+                <strong>Cara Mendaftar:</strong> Pendaftaran dilakukan secara
+                online melalui tautan berikut:
+                <a href="https://oprec.ptraazxtt.my.id/register" target="_blank"
+                  >Formulir Pendaftaran Online</a
+                >. <br /><br />
                 <strong>Pilihan Posisi:</strong>
                 <ul>
                   <li>
@@ -481,5 +529,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="src/sc.js"></script>
+    <script src="src/form-timer.js"></script>
   </body>
 </html>
